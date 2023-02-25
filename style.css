@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#baslik{
+    font-family: 'Tilt Prism', cursive;
+    margin-top: 100px;
+}
+#toDo{
+    font-family: 'Dancing Script', cursive;
+
+}
+#icerik{
+    margin-top: 30px;
+}
