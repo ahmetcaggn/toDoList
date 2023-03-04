@@ -141,6 +141,7 @@ function verileriCek(deger, id) {
         if (id === tasks[i][2]) {
             tasks[i][1] = deger;
             localStorage.setItem('tasks', JSON.stringify(tasks))
+            location.reload();
         }
 
     }
@@ -160,12 +161,18 @@ tekSil.forEach(element => {
 function tekTekSil(e) {
     
     if (e.target.matches('button')) {
-        for (let i = 0; i < tasks.length; i++) {
-            if (e.target.id == tasks[i][2]) {
-                tasks.splice(i, 1);
+        if(tasks.length <= 1){
+            hepsiniSil();
+        }else{
+            for (let i = 0; i < tasks.length; i++) {
+                if (e.target.id == tasks[i][2]) {
+                    // console.log(tasks[i])
+                    tasks.splice(i, 1);
+                    
+                }
                 localStorage.setItem('tasks', JSON.stringify(tasks));
+                location.reload();
             }
-
         }
     }
 }
